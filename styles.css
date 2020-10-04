@@ -1,0 +1,29 @@
+.image-scroller,
+.image-scroller .scroll-container,
+.image-scroller, .scroll-container, .image-container {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.image-scroller {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.image-scroller img {
+    max-width: initial;
+}
+
+.image-scroller .scroll-container {
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.image-scroller.reverse .scroll-container {
+    animation-direction: reverse;
+}
+
+.image-scroller.pausable:hover .scroll-container {
+    animation-play-state: paused;
+}
